@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Portofolio | Mahasigma</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="profile.jpg" alt="Profile"
+                class="profile-img">
+            <span>PORTOFOLIO</span>
+        </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#tentang-saya">Tentang</a></li>
+                    <li><a href="#proyek">Proyek</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="header-opacity"></div>
+        <div class="header-jumbotron">
+            <h4>SELAMAT DATANG</h4>
+            <h1>SAYA SEORANG <span class="highlight">MAHASIGMA</span></h1>
+            <p>Kreativitas tanpa batas, dedikasi tanpa henti.</p>
+        </div>
+     </header>
+
+     <section id="statistic">
+        <div class="wrapper">
+            <div class="stat-item">
+                <i class="fa-solid fa-swatchbook"></i>
+                <h3>3</h3>
+                <small>Proyek Selesai</small>
+            </div>
+            <div class="stat-item">
+                <i class="fa-solid fa-user"></i>
+                <h3>3</h3>
+                <small>Klien Puas</small>
+            </div>
+            <div class="stat-item">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3>3</h3>
+                <small>Pengalaman</small>
+            </div>
+        </div>
+     </section>
+
+     <section id="tentang-saya">
+        <div class="wrapper">
+            <h2 class="section-title">Tentang Saya</h2>
+            <div class="content">
+                <p>Halo! Saya adalah <strong>MAHASIGMA</strong> Seorang Web Developer yang berdedikasi dalam menciptakan aplikasi web berperforma tinggi dengan fokus pada keseimbangan antara arsitektur kode yang bersih dan pengalaman pengguna yang intuitif. Menguasai teknologi modern seperti [Sebutkan Tech Stack, misal: React.js, Node.js, dan Laravel], saya memiliki pengalaman dalam mentransformasi konsep desain yang kompleks menjadi solusi digital yang responsif, skalabel, dan fungsional. Saya tidak hanya berfokus pada penulisan kode, tetapi juga berkomitmen pada optimasi performa, keamanan, dan praktik SEO teknis untuk memastikan setiap proyek memberikan dampak nyata bagi bisnis. Sebagai pembelajar cepat di industri yang dinamis, saya selalu berupaya mengintegrasikan tren teknologi terbaru untuk menghadirkan produk digital yang inovatif dan berorientasi pada masa depan.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyek">
+        <div class="wrapper">
+            <h2 class="section-title">Proyek / Karya</h2>
+            <div class="grid-proyek">
+                <div class="card">
+                    <img src="project1.png" alt="Proyek 1">
+                    <div class="card-info">
+                        <h3>Aplikasi Mobile</h3>
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="project2.jpg" alt="Proyek 2">
+                    <div class="card-info">
+                        <h3>Website</h3>
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="project3.jpg" alt="Proyek 3">
+                    <div class="card-info">
+                        <h3>UI/UX</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <div class="wrapper">
+            <h2 class="section-title">Hubungi Saya</h2>
+            <div class="kontak-container">
+                <div class="info">
+                    <p><i class="fa-solid fa-envelope"></i> admin@mahasigma.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +62 812 3456 789</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Yogyakarta, Indonesia</p>
+                </div>
+                <form>
+            
+                    <textarea placeholder="Pesan Anda" rows="5"></textarea>
+                    <button type="submit" class="btn-kirim">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy;Website Portofolio | Made with <i class="fa-solid fa-heart"></i></p>
+    </footer>
+    <script>
+    const reveals = document.querySelectorAll(".reveal");
+
+    const revealOnScroll = () => {
+        for (let i = 0; i < reveals.length; i++) {
+            let windowHeight = window.innerHeight;
+            let revealTop = reveals[i].getBoundingClientRect().top;
+            let revealPoint = 150;
+
+            if (revealTop < windowHeight - revealPoint) {
+                reveals[i].classList.add("active");
+            }
+        }
+    };
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+</script>
+</body>
+</html>
